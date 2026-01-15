@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(imgui_app LANGUAGES CXX)
+project(psyched LANGUAGES CXX)
 
 # Set C++ Standard
 set(CMAKE_CXX_STANDARD 20)
@@ -59,12 +59,12 @@ elseif(UNIX AND NOT APPLE)
 endif()
 
 # Create Executable
-add_executable(imgui_app ${APP_SOURCES} ${IMGUI_SOURCES})
+add_executable(psyched ${APP_SOURCES} ${IMGUI_SOURCES})
 
 # Link Libraries
-target_link_libraries(imgui_app PRIVATE ${SDL2_LIBRARIES} ${PLATFORM_LIBS})
+target_link_libraries(psyched PRIVATE ${SDL2_LIBRARIES} ${PLATFORM_LIBS})
 
 # Standard linking for dl, pthread on Linux
 if(UNIX AND NOT APPLE)
-    target_link_libraries(imgui_app PRIVATE dl pthread)
+    target_link_libraries(psyched PRIVATE dl pthread)
 endif()

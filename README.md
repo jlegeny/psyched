@@ -44,16 +44,16 @@ Run the executable found in the `build` directory.
 *   **macOS**: Uses Metal.
 
 ```bash
-./build/imgui_app
+./build/psyched
 ```
 
 ### Fallback (Software / OpenGL)
 If hardware acceleration is not available or fails, use the fallback mode:
 
 ```bash
-./build/imgui_app --fallback
+./build/psyched --fallback
 ```
 or
 ```bash
-./build/imgui_app --software-renderer
+./build/psyched --software-renderer
 ```
